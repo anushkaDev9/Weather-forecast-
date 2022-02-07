@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>WEATHER FORECASTING</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+             body{
+                 background-color: rgb(18, 11, 114);
+             }
+             .dark-mode {
+  background-color: black;
+  color: white;
+}
+            .p{
+                
+                font-size: 50px;
+                 color: rgb(220, 229, 231);
+                text-align: center;
+                text-shadow: 0 1px 0 rgb(167, 40, 206),
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+               
+            }
+            .y{
+                
+                font-family:Georgia, serif;
+                text-align: center;
+                color: rgb(13, 5, 54);
+                text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+            }
+            .a{
+                font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif ;
+
+                font-size: 20px;
+                text-align: center;
+                
+            }
+            .q{
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                text-align: center;
+                }
+                .jumbotron{
+                  margin-left: 180px;
+                  margin-right: 180px;
+                }
+                .myDiv {
+  border: 5px outset red;
+  background-color: lightblue;    
+  text-align: center;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+.t{
+    text-align: center;
+    font-size: 23px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ul {
+  list-style-type: none;
+  margin-left: 300px;
+  padding: 0;
+  overflow: hidden;
+  background-color:transparent;
+  
+}
+
+li {
+  float: left;
+ 
+  text-align: center;
+}
+
+li a {
+  display: block;
+  color: rgb(40, 114, 18);
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size:25px;
+  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+}
+
+li a:hover {
+  background-color: #111111;
+}
+.pop{
+  color: rgb(122, 7, 117);
+}
+
+
+
+            
+        </style>
+
+    </head>
+    <body>
+      <div class="mlml">
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#register" title="go to register module">REGISTER</a></li>
+      <li><a href="#login"title="go to login module">LOGIN</a></li>
+      <li><a href="place.html">WEATHER FORECASETING</a></li>
+    </ul>
+       
+        <h1 class="p"><b><u>WEATHER FORECASTING</u></b></h1>
+        </div>
+        <div class="rows">
+        <div class="container col-sm-1 "></div>
+        <div class="container col-sm-10">
+          <div></div>
+           <div id="home"class="container bg-info" style="padding-top:60px;padding-bottom:60px">
+           <p>
+              <h1 class="pop">INTRODUCTION</h1>
+              <p>
+               This a website that can give you your current location weather and also help you to find out the other location weather you wish like!
+              <h3>STEP 1:-</h3><h4>REGISTER TO OUR WEBSITE !THE REGISTER MODULE IS PRESENT AT THE TOP MIDDLE OR YOU CAN SCROLL DOWN!</h2> 
+              <h3>STEP 2:-</h3><h4>AFTER REGISRATION YOU HAVE LOGIN THROUGH THE LOGIN MODULE PRESENT AT THE TOP MIDDLE OR SROLL DOWN(IF REGISRATION DONE ONCE YOU NEED NOT REGISER AGAIN YOU CAN DIRECTLY LOGIN</h4>
+                <h3>STEP 3:-</h3><h4>AFTER LOGIN YOU CAN VIEW YOUR WEATHER AND ALSO FIND OU WEATHER OF OTHER PLACES</h4>
+              </p>
+           
+           
+            
+         </div>
+         <div id="register"class="container bg-danger" style="padding-top:60px;padding-bottom:60px">
+            <h1 class="y"><u><b>REGISTER </b></u></h1>
+            <br>
+            <br>
+                 <div class="jumbotron">
+                <form class="a">
+                   
+                <label for="fn" >FIRST NAME*</label><br>
+                <input type="text" name="fn" required><br>
+                <label for="ln">LAST NAME*</label><br>
+                <input type="text" name="ln" required><br><br>
+                <label for="ge">MALE</label>
+                <input type="radio" name="ge">
+                <label for="ge">FEMALE</label>
+                 <input type="radio" name="ge">
+                <label for="ge">OTHER</label>
+                <input type="radio" name="ge"><br><br>
+                
+               
+            <label for="birthday">ENTER YOUR DATE OF BIRTH</label><br>
+            <input type="date" name="birthday"><br><br>
+            <label for="n"> CHOOSE YOUR COUNTRY*</label><br>
+            <select name="n" id="n">
+            <option value="Afghanistan" >Afghanistan</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Canada">Canada</option>
+            <option value="China">  China</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+             <option value="Greece">Greece</option>
+             <option value="Iceland">Iceland</option>
+             <option value="india">India</option>
+             <option value="Indonesia">Indonesia</option>
+             <option value="  Italy"> Japan</option>
+             <option value="  Italy"> Kenya</option>
+             <option value="  Italy"> Italy</option>
+             <option value="  Italy">Laos</option>
+             <option value="  Italy"> USA</option>
+             <option value="  Italy">Myanmar</option>
+             <option value="  Italy">Spain</option>
+            
+             
+             <option value="  Italy"> Italy</option>
+             
+             <option value="  Italy"> Italy</option>
+             <option value="  Italy"> Italy</option>
+            
+             <option value="  Italy"> Italy</option>
+             <option value="  Italy"> Italy</option>
+        
+             <option value="  Italy"> Italy</option>
+
+            
+
+            </select><br><br>
+
+          <label for="email">EMAIL ADDRESS*</label><br>
+            <input type="email" name="email" required><br>
+            <label for="password">PASSWORD*</label><br>
+            <input type="password" name="password"  required><br><br>
+        
+            <input type="button" onclick="alert('REGISTER DONE SUCCESSFULLY')" value="Click Me!">         
+                    
+                    
+                </form>
+           
+        </div>
+                
+           </div>
+           <div id="login" class="container bg-secondary"style="padding-top:60px;padding-bottom:60px">
+               <h1 class="q">LOGIN</h1>
+               <div class="myDiv">
+               <form class="t">
+               <label for="email">EMAIL ADDRESS</label><br>
+                <input type="email" name="email"><br>
+                <label for="password">PASSWORD</label><br>
+                <input type="password" name="password"><br>
+                <button >
+                  <a href="weather.html">submit</a>
+                </button>
+               </form>
+            </div>
+     </div>       
+    <div class="container col-sm-1"></div>
+</div>
+    </body>
+</html>

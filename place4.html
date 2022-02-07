@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <style>
+* {
+box-sizing: border-box;
+}
+
+#myInput {
+background-image: url('/css/searchicon.png');
+background-position: 10px 12px;
+background-repeat: no-repeat;
+width: 100%;
+font-size: 16px;
+padding: 12px 20px 12px 40px;
+border: 1px solid #ddd;
+margin-bottom: 12px;
+}
+
+#myUL {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+#myUL li a {
+border: 1px solid #ddd;
+margin-top: -1px; /* Prevent double borders */
+background-color: #f6f6f6;
+padding: 12px;
+text-decoration: none;
+font-size: 18px;
+color: black;
+display: block
+}
+
+#myUL li a:hover:not(.header) {
+background-color:transparent;
+
+}
+body{
+          background-color: lightblue;
+
+      }
+      .button {
+        text-align: center;
+      }
+      .mydiv{
+border: 5px outset rgb(158, 28, 28);
+background-color: lightblue;
+text-align: center;
+}
+.jumbotron{
+text-align: center;
+}
+.p{
+              
+              font-size: 50px;
+              font-family: "Comic Sans MS", cursive, sans-serif;
+              color: red;
+              text-align: center;
+              text-shadow: 0 1px 0 rgb(167, 40, 206),
+             0 2px 0 #c9c9c9,
+             0 3px 0 #bbb,
+             0 4px 0 #b9b9b9,
+             0 5px 0 #aaa,
+             0 6px 1px rgba(0,0,0,.1),
+             0 0 5px rgba(0,0,0,.1),
+             0 1px 3px rgba(0,0,0,.3),
+             0 3px 5px rgba(0,0,0,.2),
+             0 5px 10px rgba(0,0,0,.25),
+             0 10px 10px rgba(0,0,0,.2),
+             0 20px 20px rgba(0,0,0,.15);
+             
+          }
+</style>
+</head>
+<body>
+  <h1 class="p"><b><u>WEATHER FORECASTING</u></b></h1>
+  <div class="rows">
+      <div class="container col-sm-1"> </div>
+          <div class="container col-sm-10">
+              <div class="jumbotron">
+                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+
+<li><a href="#nepal">Nepal</a></li>
+<li><a href="#nz">New zealand</a></li>
+
+<li><a href="#samos">Samos</a></li>
+
+<li><a href="#singapore">singapore</a></li>
+
+</ul>
+
+<script>
+function myFunction() {
+var input, filter, ul, li, a, i, txtValue;
+input = document.getElementById("myInput");
+filter = input.value.toUpperCase();
+ul = document.getElementById("myUL");
+li = ul.getElementsByTagName("li");
+for (i = 0; i < li.length; i++) {
+  a = li[i].getElementsByTagName("a")[0];
+  txtValue = a.textContent || a.innerText;
+  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+  } else {
+      li[i].style.display = "none";
+  }
+}
+}
+</script>
+</div><br>
+<br>
+<br>
+<br>
+<br>
+<script>
+function showPosition() {
+if(navigator.geolocation) {
+   navigator.geolocation.getCurrentPosition(function(position) {
+       var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+       document.getElementById("result").innerHTML = positionInfo;
+   });
+} else {
+   alert("Sorry, your browser does not support HTML5 geolocation.");
+}
+}
+</script>
+
+</div>
+<div id="nepal" class="jumbotron">
+    <p id="w" style="display: none">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/28d3984d12/nepal/" data-label_1="NEPAL" data-label_2="WEATHER" data-theme="desert" >NEPAL WEATHER</a>
+        <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+    </p>
+    <button  type="button" onclick="document.getElementById('w').style.display='block'">CLICK HERE TO KNOW THE WEATHER OF NEPAL</button>
+</div>
+<div id="nz" class="jumbotron">
+    <p id="e" style="display: none">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/n40d90174d89/new-zealand/" data-label_1="NEW ZEALAND" data-label_2="WEATHER" data-theme="pool_table" >NEW ZEALAND WEATHER</a>
+        <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+    </p>
+    <button  type="button" onclick="document.getElementById('e').style.display='block'">CLICK HERE TO KNOW THE WEATHER OF NEW ZEALAND</button>
+</div>
+
+   
+</div>
+<div id="samos" class="jumbotron">
+    <p id="u" style="display: none">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/37d7626d98/samos/" data-label_1="SAMOS" data-label_2="WEATHER" data-theme="weather_one" >SAMOS WEATHER</a>
+        <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+    </p>
+    <button  type="button" onclick="document.getElementById('u').style.display='block'">CLICK HERE TO KNOW THE WEATHER OF SAMOS</button>
+</div>
+
+<div id="singapore" class="jumbotron">
+    <p id="y" style="display: none">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/1d35103d82/singapore/" data-label_1="SINGAPORE" data-label_2="WEATHER" data-theme="pillows" >SINGAPORE WEATHER</a>
+        <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+    </p>
+    <button  type="button" onclick="document.getElementById('y').style.display='block'">CLICK HERE TO KNOW THE WEATHER OF SINGAPORE</button>
+</div>
+<div class="container">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="place3.html">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="place.html">1</a></li>
+      <li class="page-item"><a class="page-link" href="place3.html">2</a></li>
+      <li class="page-item"><a class="page-link" href="place4.html">3</a></li>
+    </ul>
+                    
+      </body>
+  </html>

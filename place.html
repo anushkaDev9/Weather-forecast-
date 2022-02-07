@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color:transparent;
+  
+}
+body{
+            background-color: lightblue;
+
+        }
+        .button {
+          text-align: center;
+        }
+        .mydiv{
+  border: 5px outset rgb(158, 28, 28);
+  background-color: lightblue;
+  text-align: center;
+}
+.jumbotron{
+text-align: center;
+}
+.p{
+                
+                font-size: 50px;
+                font-family: "Comic Sans MS", cursive, sans-serif;
+                color: red;
+                text-align: center;
+                text-shadow: 0 1px 0 rgb(167, 40, 206),
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+               
+            }
+</style>
+           
+        
+           
+        
+    </head>
+    <body>
+      <h1 class="p"><b><u>WEATHER FORECASTING</u></b></h1>
+        <div class="rows">
+            <div class="container col-sm-1"> </div>
+                <div class="container col-sm-10">
+                    <div class="jumbotron">
+                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  
+  <li><a href="#Ahmedabad,Gujarat,India">Ahmedabad,Gujarat,India</a></li>
+
+  <li><a href="#Arunachal Pradesh">Arunachal Pradesh, India</a></li>
+  <li><a href="#Agra, Uttar Pradesh, India">Agra, Uttar Pradesh, India</a></li>
+<li><a href="#austria">Austria</a></li>
+  <li><a href="#australia">australia</a></li>
+  <li><a href="#Bangladesh">Bangladesh</a></li>
+  <li><a href="#Brazil">Brazil</a></li>
+  <li><a href="#Bihar, India"> Bihar, India</a></li>
+  <li><a href="#Chandigarh">Chandigarh, India</a></li>
+  <li><a href="weather.html">Canada</a></li>
+  <li><a href="weather.html">China</a></li>
+  <li><a href="weather.html"> Delhi, India</a></li>
+  <li><a href="weather.html">Goa, India</a></li>
+  <li><a href="weather.html"> Haryana, India</a></li>
+ <li><a href="weather.html">Chennai,India</a></li>
+  <li><a href="weather.html">afganistan  </a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+ </div><br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <script>
+ function showPosition() {
+     if(navigator.geolocation) {
+         navigator.geolocation.getCurrentPosition(function(position) {
+             var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+             document.getElementById("result").innerHTML = positionInfo;
+         });
+     } else {
+         alert("Sorry, your browser does not support HTML5 geolocation.");
+     }
+ }
+</script>
+              </div>
+              <div id="Ahmedabad,Gujarat,India" class="jumbotron">
+
+                  <p id="d" style="display:none">
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/23d0272d57/ahmedabad/" data-label_1="AHMEDABAD" data-label_2="WEATHER" data-theme="marine" >AHMEDABAD WEATHER</a>
+                    <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                    </script>
+</p>
+<button  type="button" onclick="document.getElementById('d').style.display='block'">CLICK HERE TO KNOW THE WEATHER OF AHMEDABAD,GUJARAT,INDIA!</button>
+<p id="q" style="display: none;">
+  <a class="weatherwidget-io" href="https://forecast7.com/en/27d1878d01/agra/" data-label_1="AGRA" data-label_2="WEATHER" data-theme="original" >AGRA WEATHER</a>
+  <script>
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+  </script>
+</div>
+                    <div id="Arunachal Pradesh" class="jumbotron">
+                  <p id="de" style="display: none">
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/28d2294d73/arunachal-pradesh/" data-label_1="ARUNACHAL PRADESH" data-label_2="WEATHER" data-theme="dark" >ARUNACHAL PRADESH WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+                  </p>
+                  <button  type="button" onclick="document.getElementById('de').style.display='block'">CLICK HERE TO KNOW THE WEATHER OF ARUNACHAL PRADESH!</button>
+                </div>
+                <div id="Agra, Uttar Pradesh, India" class="jumbotron">
+                        <p id="y" style="display: none">
+                          <a class="weatherwidget-io" href="https://forecast7.com/en/27d1878d01/agra/" data-label_1="AGRA" data-label_2="WEATHER" data-theme="desert" >AGRA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+                        </p>
+                        <button  type="button" onclick="document.getElementById('y').style.display='block'">CLICK HERE TO KNOW THE WEATHER OF AGRA!</button>
+
+                </div>
+                <div id="afganistan,India" class="jumbotron">
+                  <p id="qwer" style="display: none">
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/33d9467d71/afghanistan/" data-label_1="AFGHANISTAN" data-label_2="WEATHER" data-theme="marine" >AFGHANISTAN WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+                  </p>
+                  <button  type="button" onclick="document.getElementById('qwer').style.display='block'">CLICK HERE TO KNOW THE WEATHER OF Afghanistan</button>
+                </div> 
+                <div id="australia" class="jumbotron">
+                  <p id="bas"style="display: none">
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/n25d27133d78/australia/" data-label_1="AUSTRALIA" data-label_2="WEATHER" data-theme="mountains" >AUSTRALIA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+                  </p>
+                  <button onclick="document.getElementById('bas').style.display='block'">CLICK HERE TO KNOW THE WEATHER OF AUSTRALIA!</button>
+                </div>
+                <div id="austria"class="jumbotron">
+                  <p id="ghgg" style="display: none;">
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/47d5214d55/austria/" data-label_1="AUSTRIA" data-label_2="WEATHER" data-theme="pure" >AUSTRIA WEATHER</a>
+                    <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                    </script>
+</p>
+<button onclick="document.getElementById('ghgg').style.display='block'">CLCIK HERE TO KNOW THE WEATHER  OF AUSTRIA!</button>
+
+</div>
+<div id="Bangladesh" class="jumbotron">
+  <p id="lo"style="display:none">
+    <a class="weatherwidget-io" href="https://forecast7.com/en/23d6890d36/bangladesh/" data-label_1="BANGLADESH" data-label_2="WEATHER" data-theme="weather_one" >BANGLADESH WEATHER</a>
+    <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    </script>
+  </p>
+  <button onclick="document.getElementById('lo').style.display='block'">CLICK HERE TO KNOW THE WEATHER OF BANGLADESH!</button>
+</div>
+<div id="Brazil"class="jumbotron">
+ <p id="asssss" style="display: none"> 
+  <a class="weatherwidget-io" href="https://forecast7.com/en/n14d24n51d93/brazil/" data-label_1="BRAZIL" data-label_2="WEATHER" data-theme="weather_one" >BRAZIL WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+ </p>
+ <button onclick="document.getElementById('asssss').style.display='block'">CLICK HERE TO KNOW THE WEATHER OF BRAZIL!</button>
+</div>
+  <div id="Bihar, India" class="jumbotron">
+    <p id="mmmmm" style="display: none">
+      <a class="weatherwidget-io" href="https://forecast7.com/en/27d2684d02/bihar/" data-label_1="BIHAR" data-label_2="WEATHER" data-theme="marine" >BIHAR WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+    </p>
+<button onclick="document.getElementById('mmmmm').style.display='block'">CLICK TO KNOW THE WEATHER OF BIHAR!</button>
+    
+  </div>
+  <div class="container">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="place.html">1</a></li>
+      <li class="page-item"><a class="page-link" href="place3.html">2</a></li>
+      <li class="page-item"><a class="page-link" href="place4.html">3</a></li>
+      <li class="page-item"><a class="page-link" href="place3.html">Next</a></li>
+    </ul>
+                    
+                
+                
+            
+    </body>
+</html>
